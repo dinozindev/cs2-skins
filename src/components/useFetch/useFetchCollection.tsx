@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-// Define o tipo dos dados que você espera da API
+// datatypes coming from collections json
 interface Rarity {
     id: string;
     name: string;
