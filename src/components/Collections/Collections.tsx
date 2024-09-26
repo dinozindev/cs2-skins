@@ -2,12 +2,23 @@ import styled from "styled-components";
 import useFetchCollection from "../useFetch/useFetchCollection";
 import { useState } from "react";
 
+const CollectionTitle = styled.h1`
+    text-align: center;
+    font-size: 60px;
+`
+
 const CollectionDiv = styled.div`
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 5rem;
+`
+
+const CollectionsDiv = styled.div`
+    width: 50%;
+    display:flex;
+    flex-wrap: wrap;
 `
 
 const CollectionCard = styled.div`
@@ -21,14 +32,55 @@ const CollectionCard = styled.div`
     background-color: grey;
     padding: 2rem;
     border-radius: 8px;
+    &:hover {
+        cursor: pointer;
+        scale: 1.1;
+        transition: 0.2s;
+    }
+`
+
+const WeaponCard = styled.div`
+    background-color: lightgrey;
+    text-align:center; 
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    border-radius: 16px;
+    p {
+        font-size: 20px;
+        font-weight: 700;
+
+    }
+`
+
+const CardSkinsDiv = styled.div`
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
 `
 
 const CollectionDetails = styled.div`
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const CollectionHeader = styled.header`
+    img {
+        margin-top: 2rem;
+    }
+    text-align: center;
+    background-color: grey;
+    padding: 2rem;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 2rem;
 `
 
 const Collections = () => {
   const { data, loading, error } = useFetchCollection('https://bymykel.github.io/CSGO-API/api/en/collections.json'); // API URL to connect to CSGO-API
-  const[collectionID, setCollectionID] = useState('');
+  const[collectionID, setCollectionID] = useState('collection-set-community-1');
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -39,34 +91,48 @@ const Collections = () => {
         setCollectionID(collection_id)
   }
 
+  const scrollParaTopo = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+  }
+
   // quando clicar em uma coleção, esconder as demais e mostrar apenas a clicada.
   return (
     <>
-    <h1>Collections:  </h1>
+    <CollectionTitle>Collections</CollectionTitle>
     <CollectionDiv>
+    <CollectionsDiv>
       {filteredCollection?.map(collection => (
-        <CollectionCard key={collection.id} onClick={() => handleFilteredCollection(collection.id)}>
+        <CollectionCard key={collection.id} onClick={() => {handleFilteredCollection(collection.id); scrollParaTopo();}}>
             <p>{collection.name}</p>
             <img src={collection.image} alt="" />
         </CollectionCard>
       ))}
+      </CollectionsDiv>
         {
             filteredCollection?.filter(collection => collection.id === collectionID).map(collection => (
                 <CollectionDetails key={collection.id}>
-                    <h1>{collection.name}</h1>
-                    <img src={collection.image} alt="" />
+                    <CollectionHeader>
+                        <h1>{collection.name}</h1>
+                        <img src={collection.image} alt="" />
+                    </CollectionHeader>
+                    <CardSkinsDiv>
                     {collection.contains.map(skin => (
-                        <div key={skin.id}>
+                        <WeaponCard key={skin.id}>
                             <p>{skin.name}</p>
                             <p>{skin.rarity.name}</p>
                             <img src={skin.image} alt="" />
-                        </div>
+                        </WeaponCard>
                     ))}
+                    </CardSkinsDiv>
                 </CollectionDetails>
             ))
         }
+        </CollectionDiv>
         {/* <pre>{JSON.stringify(filteredCollection, null, 2)}</pre>   */}
-    </CollectionDiv>
+    
     </>
   );
 };
