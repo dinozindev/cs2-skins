@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react';
 
-// Define o tipo dos dados que você espera da API
 interface Item {
-  // Adicione os campos esperados da resposta da API aqui
   id: string;
-  name: string; // Altere 'any' para o tipo apropriado
+  name: string; 
   description: string;
   image: string;
   contains: Array<string>;
-  // por exemplo: id: number; name: string;
 }
 
 type ApiResponse = Item[]
