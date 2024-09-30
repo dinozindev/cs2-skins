@@ -1,0 +1,250 @@
+[
+    {
+        "id": "weapon_deagle",
+        "name": "Desert Eagle"
+    },
+    {
+        "id": "weapon_elite",
+        "name": "Dual Berettas"
+    },
+    {
+        "id": "weapon_fiveseven",
+        "name": "Five-SeveN"
+    },
+    {
+        "id": "weapon_glock",
+        "name": "Glock-18"
+    },
+    {
+        "id": "weapon_ak47",
+        "name": "AK-47"
+    },
+    {
+        "id": "weapon_aug",
+        "name": "AUG"
+    },
+    {
+        "id": "weapon_awp",
+        "name": "AWP"
+    },
+    {
+        "id": "weapon_famas",
+        "name": "FAMAS"
+    },
+    {
+        "id": "weapon_g3sg1",
+        "name": "G3SG1"
+    },
+    {
+        "id": "weapon_galilar",
+        "name": "Galil AR"
+    },
+    {
+        "id": "weapon_m249",
+        "name": "M249"
+    },
+    {
+        "id": "weapon_m4a1",
+        "name": "M4A4"
+    },
+    {
+        "id": "weapon_mac10",
+        "name": "MAC-10"
+    },
+    {
+        "id": "weapon_p90",
+        "name": "P90"
+    },
+    {
+        "id": "weapon_mp5sd",
+        "name": "MP5-SD"
+    },
+    {
+        "id": "weapon_ump45",
+        "name": "UMP-45"
+    },
+    {
+        "id": "weapon_xm1014",
+        "name": "XM1014"
+    },
+    {
+        "id": "weapon_bizon",
+        "name": "PP-Bizon"
+    },
+    {
+        "id": "weapon_mag7",
+        "name": "MAG-7"
+    },
+    {
+        "id": "weapon_negev",
+        "name": "Negev"
+    },
+    {
+        "id": "weapon_sawedoff",
+        "name": "Sawed-Off"
+    },
+    {
+        "id": "weapon_tec9",
+        "name": "Tec-9"
+    },
+    {
+        "id": "weapon_hkp2000",
+        "name": "P2000"
+    },
+    {
+        "id": "weapon_mp7",
+        "name": "MP7"
+    },
+    {
+        "id": "weapon_mp9",
+        "name": "MP9"
+    },
+    {
+        "id": "weapon_nova",
+        "name": "Nova"
+    },
+    {
+        "id": "weapon_p250",
+        "name": "P250"
+    },
+    {
+        "id": "weapon_scar20",
+        "name": "Scar-20"
+    },
+    {
+        "id": "weapon_sg556",
+        "name": "SG556"
+    },
+    {
+        "id": "weapon_ssg08",
+        "name": "SSG-08"
+    },
+    {
+        "id": "weapon_m4a1_silencer",
+        "name": "M4A1-S"
+    },
+    {
+        "id": "weapon_usp_silencer",
+        "name": "USP-S"
+    },
+    {
+        "id": "weapon_cz75a",
+        "name": "CZ75-Auto"
+    },
+    {
+        "id": "weapon_revolver",
+        "name": "R8 Revolver"
+    },
+    {
+        "id": "weapon_bayonet",
+        "name": "Bayonet"
+    },
+    {
+        "id": "weapon_knife_css",
+        "name": "Classic Knife"
+    },
+    {
+        "id": "weapon_knife_flip",
+        "name": "Flip Knife"
+    },
+    {
+        "id": "weapon_knife_gut",
+        "name": "Gut Knife"
+    },
+    {
+        "id": "weapon_knife_karambit",
+        "name": "Karambit"
+    }, 
+    {
+        "id": "weapon_knife_m9_bayonet",
+        "name": "M9 Bayonet"
+    },
+    {
+        "id": "weapon_knife_tactical",
+        "name": "Huntsman Knife"
+    },
+    {
+        "id": "weapon_knife_falchion",
+        "name": "Falchion Knife"
+    },
+    {
+        "id": "weapon_knife_survival_bowie",
+        "name": "Bowie Knife"
+    },
+    {
+        "id": "weapon_knife_butterfly",
+        "name": "Butterfly Knife"
+    },
+    {
+        "id": "weapon_knife_push",
+        "name": "Shadow Daggers"
+    },
+    {
+        "id": "weapon_knife_cord",
+        "name": "Paracord Knife"
+    },
+    {
+        "id": "weapon_knife_canis",
+        "name": "Survival Knife"
+    },
+    {
+        "id": "weapon_knife_ursus",
+        "name": "Ursus Knife"
+    },
+    {
+        "id": "weapon_knife_gypsy_jackknife",
+        "name": "Navaja Knife"
+    },
+    {
+        "id": "weapon_knife_outdoor",
+        "name": "Nomad Knife"
+    },
+    {
+        "id": "weapon_knife_stiletto",
+        "name": "Stiletto Knife"
+    },
+    {
+        "id": "weapon_knife_widowmaker",
+        "name": "Talon Knife"
+    },
+    {
+        "id": "weapon_knife_skeleton",
+        "name": "Skeleton Knife"
+    },
+    {
+        "id": "weapon_knife_kukri",
+        "name": "Kukri Knife"
+    },  
+    {
+        "id": "studded_brokenfang_gloves",
+        "name": "Broken Fang Gloves"
+    }, 
+    {
+        "id": "studded_bloodhound_gloves",
+        "name": "Bloodhound Gloves"
+    },
+    {
+        "id": "sporty_gloves",
+        "name": "Sport Gloves"
+    },
+    {
+        "id": "slick_gloves",
+        "name": "Driver Gloves"
+    },
+    {
+        "id": "leather_handwraps",
+        "name": "Hand Wraps"
+    },
+    {
+        "id": "motorcycle_gloves",
+        "name": "Moto Gloves"
+    },
+    {
+        "id": "specialist_gloves",
+        "name": "Specialist Gloves"
+    },
+    {
+        "id": "studded_hydra_gloves",
+        "name": "Hydra Gloves"
+    }
+]

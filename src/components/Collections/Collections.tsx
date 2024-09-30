@@ -101,6 +101,7 @@ const Collections = () => {
   // quando clicar em uma coleção, esconder as demais e mostrar apenas a clicada.
   return (
     <>
+    {/* <pre>{JSON.stringify(data, null, 2)}</pre>  */}
     <CollectionTitle>Collections</CollectionTitle>
     <CollectionDiv>
     <CollectionsDiv>
@@ -122,7 +123,7 @@ const Collections = () => {
                     {collection.contains.map(skin => (
                         <WeaponCard key={skin.id}>
                             <p>{skin.name}</p>
-                            <p>{skin.rarity.name}</p>
+                            <p style={{color: skin.rarity.color}}>{skin.rarity.name}</p>
                             <img src={skin.image} alt="" />
                         </WeaponCard>
                     ))}
@@ -131,7 +132,7 @@ const Collections = () => {
             ))
         }
         </CollectionDiv>
-        {/* <pre>{JSON.stringify(filteredCollection, null, 2)}</pre>   */}
+        
     
     </>
   );
