@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react';
 
+interface Rarity {
+  id: string;
+  name: string;
+  color: string;
+}
+
 interface Item {
   id: string;
   name: string; 
   description: string;
   image: string;
-  contains: Array<string>;
+  rarity: Rarity;
 }
 
 type ApiResponse = Item[]

@@ -42,8 +42,7 @@ const Agents = () => {
                     <img src={agent.image} alt={agent.id}/>
                 </div>
             )))}   
-        </div>
-         <pre>{JSON.stringify(data, null, 2)}</pre>  
+        </div>  
     </>
   )
 }
