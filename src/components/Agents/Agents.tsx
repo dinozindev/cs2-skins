@@ -12,23 +12,30 @@ const Agents = () => {
         setFilter(collection)
   }
 
+  const uniqueOperationNames = Array.from(
+    new Set(data?.flatMap(agent => agent.collections.map(collection => collection.name)) || [])
+  );
+
   return (
     <>
-        <h1>Agents</h1>
         <div>
-            <button onClick={() => filterAgents("Shattered Web Agents")}>Shattered Web Agents</button>
-            <button onClick={() => filterAgents("Broken Fang Agents")}>Broken Fang Agents</button>
-            <button onClick={() => filterAgents("Operation Riptide Agents")}>Riptide Agents</button>
-            <button onClick={() => filterAgents("")}>Show All Agents</button>
+            {uniqueOperationNames?.map((operationName) => (
+                <button onClick={() => filterAgents(operationName)}>{operationName}</button>
+            ))}
+            <button onClick={() => filterAgents("")}>All Agents</button>
         </div>
         <div>
-            {filter !== "" ? (data?.filter(agent => agent.collections[0].name === filter).map(agent => (
-                <div key={agent.id}>
-                    <h2>{agent.name}</h2>
-                    <p style={{color: agent.rarity.color}}>{agent.rarity.name}</p>
-                    <img src={agent.image} alt={agent.id}/>
-                </div>
-            ))) : (data?.map(agent => (
+            {filter !== "" ? (<h2>{filter}</h2>) : (<h2>All Agents</h2>)}
+            {filter !== "" ? 
+            (data?.filter(agent => agent.collections[0].name === filter).map(agent => (
+                    <div key={agent.id}>
+                        <h2>{agent.name}</h2>
+                        <p style={{color: agent.rarity.color}}>{agent.rarity.name}</p>
+                        <img src={agent.image} alt={agent.id}/>
+                    </div>
+            ))
+        ) : 
+        (data?.map(agent => (
                 <div key={agent.id}>
                     <h2>{agent.name}</h2>
                     <p style={{color: agent.rarity.color}}>{agent.rarity.name}</p>
