@@ -17,7 +17,7 @@ const Keychains = () => {
             </div>
         ))}
     </div>
-    <pre>{JSON.stringify(data, null, 2)}</pre>
+    {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
     </>
   )
 }

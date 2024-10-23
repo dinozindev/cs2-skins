@@ -10,22 +10,29 @@ const MusicKitDiv = styled.div`
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 5.5rem;
+  padding: 5.5rem 0;
+  gap: 0.75rem;
   width: 100%;
+  background-color: #181818;
 `
 
 const MusicKitCard = styled.div`
-  width: 20%;
-  background-color: lightgrey;
-  margin: 0.75rem;
+  width: 19%;
+  background-color: #281F32;
   text-align:center;
-  padding: 1rem;
+  padding: 2rem;
+  border-radius: 8px;
   h2 {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+    height: 10%;
+  }
+  p {
+    height: 30%;
   }
   img {
     margin-top: 1.5rem;
+    height: 40%;
   }
 `
 
