@@ -45,6 +45,10 @@ const CollectionCard = styled.div`
         cursor: pointer;
         scale: 1.01;
         transition: 0.2s;
+        background-color: #281F32;
+        p {
+            color: #FDFDFD;
+        }
     }
     img {
         height: 90%;
@@ -85,8 +89,11 @@ const WeaponCard = styled.div`
     border-radius: 16px;
     width: 25%;
     background-color: #4C495C;
-    p {
+    h2 {
         font-size: 20px;
+        margin-bottom: 0.4rem;
+    }
+    p {
         font-weight: 700;
     }
     img {
@@ -148,7 +155,7 @@ const Collections = () => {
                             <CardSkinsDiv>
                                 {collection.contains.map(skin => (
                                     <WeaponCard key={skin.id}>
-                                        <p>{skin.name}</p>
+                                        <h2>{skin.name}</h2>
                                         <p style={{ color: skin.rarity.color }}>{skin.rarity.name}</p>
                                         <img src={skin.image} alt="" />
                                     </WeaponCard>

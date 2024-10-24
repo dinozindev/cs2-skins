@@ -12,38 +12,66 @@ const ListWeapons = styled.ul`
     padding-top: 5.5rem;
     display:flex;
     list-style: none;
-    flex-wrap: wrap;
+    overflow: auto;
     gap: 0.25rem;
+    margin: 0 1.5rem;
 `
 
 const WeaponButton = styled.button`
     cursor: pointer;
+    background-color: #AF75F9;
+    border: none;
+    padding: 1rem;
+    width: 200px;
+    height: 100%;
+    font-weight: 700;
+    color: black;
+    border-radius: 4px;
+    &:hover {
+        cursor: pointer;
+        scale: 1.01;
+        transition: 0.2s;
+        background-color: #281F32;
+        color: #fdfdfd;
 `
 
 const WeaponContainer = styled.div`
-    padding-top: 4rem;
+    padding: 5.5rem 0;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.75rem;
 `
 
 const WeaponCard = styled.div`
     width: 30%;
-    background-color: lightgrey;
-    margin: 0.25rem;
+    background-color: #281F32;
     text-align: center;
-    padding: 0.75rem;
+    padding: 1.5rem 1rem;
 `
 
 const WeaponCardHeader = styled.div`
     display:flex;
     justify-content: center;
-    align-items: center;
+    padding-bottom: 1rem;
     gap: 1.5rem;
     img {
         width: 20%;
         height: 20%;
     }
+`
+
+const WeaponCardHeaderText = styled.div`
+    display:flex;
+    flex-direction: column;
+    span {
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
+`
+
+const ImageWeapon = styled.img`
+    width: 90%;
 `
 
 const Weapons = () => {
@@ -78,20 +106,28 @@ const Weapons = () => {
         {filteredWeapons?.map(weapon => (   
                 <WeaponCard>
                     <WeaponCardHeader>
-                        <div>
-                            <h1>{weapon.name}</h1>
-                            <p style={{color: weapon.rarity.color}}>{weapon.rarity.name}</p>
+                        <WeaponCardHeaderText>
+                            <h2>{weapon.name}</h2>
+                            <span style={{color: weapon.rarity.color}}>{weapon.rarity.name}</span>
                             {weapon.collections.map(collection => (
                             <p key={collection.id}>{collection.name}</p>
                         ))}
-                            <p>Souvenir available?: {weapon.souvenir == true ? "Yes" : "No"}</p>
-                            <p>StatTrak available?: {weapon.stattrak == true ? "Yes": "No"}</p>
-                        </div>
+                            {weapon.souvenir && weapon.souvenir == true ? (
+                                <p style={{color: "#FFD700"}}>Souvenir Available</p>
+                            ) : (
+                                ""
+                            )}
+                            {weapon.stattrak && weapon.stattrak == true ? (
+                                <p style={{color: "#CF6A32"}}>StatTrak™ Available</p>
+                            ) : (
+                                ""
+                            )}
+                        </WeaponCardHeaderText>
                         {weapon.collections.map(collection => (
                             <img src={collection.image}></img>
                         ))}
                     </WeaponCardHeader>
-                    <img src={weapon.image}></img>
+                    <ImageWeapon src={weapon.image}></ImageWeapon>
                 </WeaponCard>    
         ))}
         </WeaponContainer> 
