@@ -33,6 +33,7 @@ const MusicKitCard = styled.div`
   img {
     margin-top: 1.5rem;
     height: 40%;
+    width: 80%;
   }
 `
 

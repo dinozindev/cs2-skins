@@ -23,6 +23,8 @@ const CollectionsDiv = styled.div`
     overflow: auto;
     gap: 0.5rem;
     padding: 0.5rem;
+
+    
 `
 
 const CollectionCard = styled.div`
@@ -87,7 +89,7 @@ const WeaponCard = styled.div`
     text-align:center; 
     padding: 2rem;
     border-radius: 16px;
-    width: 25%;
+    min-width: 20%;
     background-color: #4C495C;
     h2 {
         font-size: 20px;

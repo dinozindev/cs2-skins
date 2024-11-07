@@ -4,6 +4,7 @@ import cs2logo from "/img/cs2-logo.jpg";
 
 const StyledHeader = styled.header` 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     padding: 2rem 0;

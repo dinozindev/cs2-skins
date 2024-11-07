@@ -2,20 +2,77 @@ import { useState } from "react";
 import useFetchSticker from "../useFetch/useFetchSticker";
 import styled from "styled-components";
 
+const StickersTitle = styled.h2`
+    text-align: center;
+    font-size: 60px;
+`
+
+const StickersHeader = styled.header`
+    text-align: center;
+    margin: 4rem auto;
+    font-size: 30px;
+    padding: 2rem;
+    background-color: #AF75F9;
+    width: 50%;
+    font-weight: 700;
+`
+
+const StickersMain = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 5rem;
+`
+
 const CratesDiv = styled.div`
     overflow: auto;
-    height: 400px;
-    width: 30%;
+    height: 600px;
+    width: 25%;
     display:flex;
-    flex: wrap;
+    gap: 0.5rem;
     flex-direction: column;
+`
+
+const CrateButton = styled.button`
+    background-color: #AF75F9;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background-color: #281F32;
+      transition: 0.2s;
+    }
 `
 
 const StickersDiv = styled.div`
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    width:70%;
+    gap: 1rem;
 `
+
+const StickerCard = styled.div`
+    width: 25%;
+    background-color: #281F32;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 400px;
+`
+
+const StickerCardHeader = styled.div`
+  height: 20%;
+  text-align: center;
+`
+const StickerImage = styled.img` 
+`
+
 
 const Stickers = () => {
   const { data, loading, error } = useFetchSticker('https://bymykel.github.io/CSGO-API/api/en/stickers.json');
@@ -41,31 +98,30 @@ const Stickers = () => {
 
   return (
     <>
-    <CratesDiv>
-      {/* Renderiza os botões de crates */}
-      {uniqueCrateNames.map((crateName, index) => (
-        <button key={index} onClick={() => handleCrateSelection(crateName)}>
-          {crateName}
-        </button>
-      ))}
-      </CratesDiv>
-      {/* Renderiza os adesivos filtrados */}
-      <StickersDiv>
-      {filteredStickers?.map(sticker => (
-        <div key={sticker.id}>
-          <div>
-            {sticker.crates.length > 0 ? (
-              <p>{sticker.crates[0].name}</p>
-            ) : (
-              <p>Not obtainable through crates</p>
-            )}
-            <p>{sticker.name}</p>
-            <p style={{color: sticker.rarity.color}}>{sticker.rarity.name}</p>
-            <img src={sticker.image} alt={sticker.name} />
-          </div>
-        </div>
-      ))}
-      </StickersDiv>
+      {/* <pre>{JSON.stringify(filteredStickers, null, 2)}</pre>  */}
+      <StickersTitle>Stickers</StickersTitle>
+      <StickersHeader>{crate}</StickersHeader>
+      <StickersMain>
+        <CratesDiv>
+          {uniqueCrateNames.map((crateName, index) => (
+            <CrateButton key={index} onClick={() => handleCrateSelection(crateName)}>
+              <p>{crateName}</p>
+
+            </CrateButton>
+          ))}
+        </CratesDiv>
+        <StickersDiv>
+          {filteredStickers?.map(sticker => (
+            <StickerCard key={sticker.id}>
+              <StickerCardHeader>
+                  <p>{sticker.name.replace("Sticker |", "")}</p>
+                  <p style={{ color: sticker.rarity.color }}>{sticker.rarity.name}</p>
+              </StickerCardHeader>
+              <StickerImage src={sticker.image} alt={sticker.name} />
+            </StickerCard>
+          ))}
+        </StickersDiv>
+      </StickersMain>
     </>
   );
 };

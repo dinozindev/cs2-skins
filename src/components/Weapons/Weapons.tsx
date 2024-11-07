@@ -14,7 +14,8 @@ const ListWeapons = styled.ul`
     list-style: none;
     overflow: auto;
     gap: 0.25rem;
-    margin: 0 1.5rem;
+    margin: 0 auto;
+    width: 90%;
 `
 
 const WeaponButton = styled.button`
@@ -127,7 +128,7 @@ const Weapons = () => {
                             <img src={collection.image}></img>
                         ))}
                     </WeaponCardHeader>
-                    <ImageWeapon src={weapon.image}></ImageWeapon>
+                    <ImageWeapon src={weapon.image} />
                 </WeaponCard>    
         ))}
         </WeaponContainer> 
