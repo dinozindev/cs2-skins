@@ -2,6 +2,7 @@ import useFetchSkin from "../useFetch/useFetchSkin";
 import weapons from '../../weapons.json';
 import { useState } from "react";
 import styled from "styled-components";
+import Loading from "../Loading/Loading";
 
 const TitleWeapon = styled.h1`
     text-align: center;
@@ -80,7 +81,7 @@ const Weapons = () => {
     const [actualWeapon, setActualWeapon] = useState('weapon_deagle');
     const { data, loading, error } = useFetchSkin('https://bymykel.github.io/CSGO-API/api/en/skins.json'); 
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <Loading />;
     if (error) return <p>Error: {error}</p>;
 
     // updates the actual weapon

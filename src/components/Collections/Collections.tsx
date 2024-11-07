@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import useFetchCollection from "../useFetch/useFetchCollection";
 import { useState } from "react";
+import Loading from "../Loading/Loading";
 
 const CollectionTitle = styled.h1`
     text-align: center;
@@ -115,7 +116,7 @@ const Collections = () => {
     const { data, loading, error } = useFetchCollection('https://bymykel.github.io/CSGO-API/api/en/collections.json'); // API URL to connect to CSGO-API
     const [collectionID, setCollectionID] = useState('collection-set-community-1');
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <Loading />;
     if (error) return <p>Error: {error}</p>;
 
     const filteredCollection = data?.filter(collection => !collection.name.includes('Graffiti')) // Removes graffiti collections

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import useFetch from "../useFetch/useFetch";
+import Loading from "../Loading/Loading";
 
 const MusicKitTitle = styled.h1`
   text-align: center;
@@ -42,7 +43,7 @@ const MusicKits = () => {
 
   const filteredMusicKits = data?.filter(musickit => !musickit.name.includes('StatTrak™'))
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>Error: {error}</p>;
 
   return (

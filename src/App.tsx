@@ -7,6 +7,7 @@ import Stickers from "./components/Stickers/Stickers"
 import Agents from "./components/Agents/Agents"
 import Keychains from "./components/Keychains/Keychains"
 import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/agents' element={<Agents />}></Route>
         <Route path='/keychains' element={<Keychains />}></Route>
       </Routes>
+      <Footer />
     </main>
     </>
   )

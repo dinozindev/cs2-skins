@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useFetchSticker from "../useFetch/useFetchSticker";
 import styled from "styled-components";
+import Loading from "../Loading/Loading";
 
 const StickersTitle = styled.h2`
     text-align: center;
@@ -78,7 +79,7 @@ const Stickers = () => {
   const { data, loading, error } = useFetchSticker('https://bymykel.github.io/CSGO-API/api/en/stickers.json');
   const [crate, setCrate] = useState("EMS Katowice 2014 Legends");
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>Error: {error}</p>;
 
   // Obtém os nomes únicos dos crates
