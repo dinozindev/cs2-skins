@@ -1,5 +1,38 @@
 import { useState } from "react";
 import useFetchAgent from "../useFetch/useFetchAgent"
+import styled from "styled-components";
+
+const AgentsTitle = styled.h2`
+    text-align: center;
+    font-size: 60px;
+`
+
+const AgentsButtonsDiv = styled.div`
+    padding: 3rem 0 6rem 0;
+    display:flex;
+    justify-content:center;
+    gap: 1rem;
+`
+
+const AgentButton = styled.button`
+    background-color: #AF75F9;
+    color: #000;
+    border:none;
+    padding: 1rem;
+    border-radius: 0.25rem;
+
+    &:hover {
+        cursor: pointer;
+        color: #fff;
+        background-color: #281F32;
+        transition: 0.2s;
+    }
+`
+
+const AgentCollectionTitle = styled.h3`
+    text-align: center;
+    font-size: 40px;
+`
 
 const Agents = () => {
   const {data, error, loading} = useFetchAgent("https://bymykel.github.io/CSGO-API/api/en/agents.json");
@@ -18,14 +51,15 @@ const Agents = () => {
 
   return (
     <>
-        <div>
+        <AgentsTitle>Agents</AgentsTitle>
+        <AgentsButtonsDiv>
             {uniqueOperationNames?.map((operationName) => (
-                <button onClick={() => filterAgents(operationName)}>{operationName}</button>
+                <AgentButton onClick={() => filterAgents(operationName)}>{operationName}</AgentButton>
             ))}
-            <button onClick={() => filterAgents("")}>All Agents</button>
-        </div>
+            <AgentButton onClick={() => filterAgents("")}>All Agents</AgentButton>
+        </AgentsButtonsDiv>
         <div>
-            {filter !== "" ? (<h2>{filter}</h2>) : (<h2>All Agents</h2>)}
+            {filter !== "" ? (<AgentCollectionTitle>{filter}</AgentCollectionTitle>) : (<AgentCollectionTitle>All Agents</AgentCollectionTitle>)}
             {filter !== "" ? 
             (data?.filter(agent => agent.collections[0].name === filter).map(agent => (
                     <div key={agent.id}>
