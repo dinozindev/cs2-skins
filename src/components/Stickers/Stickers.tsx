@@ -76,7 +76,7 @@ const StickerImage = styled.img`
 
 
 const Stickers = () => {
-  const { data, loading, error } = useFetchSticker('https://bymykel.github.io/CSGO-API/api/en/stickers.json');
+  const { data, loading, error } = useFetchSticker('https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/stickers.json');
   const [crate, setCrate] = useState("EMS Katowice 2014 Legends");
 
   if (loading) return <Loading />;

@@ -79,7 +79,7 @@ const ImageWeapon = styled.img`
 const Weapons = () => {
 
     const [actualWeapon, setActualWeapon] = useState('weapon_deagle');
-    const { data, loading, error } = useFetchSkin('https://bymykel.github.io/CSGO-API/api/en/skins.json'); 
+    const { data, loading, error } = useFetchSkin('https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/skins.json'); 
 
     if (loading) return <Loading />;
     if (error) return <p>Error: {error}</p>;

@@ -39,7 +39,7 @@ const MusicKitCard = styled.div`
 `
 
 const MusicKits = () => {
-  const { data, loading, error } = useFetch('https://bymykel.github.io/CSGO-API/api/en/music_kits.json'); 
+  const { data, loading, error } = useFetch('https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/music_kits.json'); 
 
   const filteredMusicKits = data?.filter(musickit => !musickit.name.includes('StatTrak™'))
 

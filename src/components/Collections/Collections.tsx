@@ -113,7 +113,7 @@ const CardSkinsDiv = styled.div`
 
 
 const Collections = () => {
-    const { data, loading, error } = useFetchCollection('https://bymykel.github.io/CSGO-API/api/en/collections.json'); // API URL to connect to CSGO-API
+    const { data, loading, error } = useFetchCollection('https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/collections.json'); // API URL to connect to CSGO-API
     const [collectionID, setCollectionID] = useState('collection-set-community-1');
 
     if (loading) return <Loading />;
