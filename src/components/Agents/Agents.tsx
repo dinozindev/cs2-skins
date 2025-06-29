@@ -54,7 +54,7 @@ const AgentCard = styled.div`
 `
 
 const Agents = () => {
-    const { data, error, loading } = useFetchAgent("https://bymykel.github.io/CSGO-API/api/en/agents.json");
+    const { data, error, loading } = useFetchAgent("https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/agents.json");
     const [filter, setFilter] = useState('');
 
     if (loading) return <Loading />;

@@ -43,7 +43,7 @@ const useFetchAgent = (url: string) => {
         }
         const result: ApiResponse = await response.json();
         setData(result);
-      } catch (error: any) {
+      } catch (error : any) {
         setError(error.message);
       } finally {
         setLoading(false);
