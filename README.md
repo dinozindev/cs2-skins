@@ -26,7 +26,7 @@ npm install
 npm run dev
 ```
 
-## Tecnologies used
+## Technologies used
 
 - TypeScript
 - React
