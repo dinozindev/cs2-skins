@@ -33,7 +33,7 @@ const MusicKitCard = styled.div`
   }
   img {
     margin-top: 1.5rem;
-    height: 40%;
+    height: 60%;
     width: 80%;
   }
 `
@@ -53,7 +53,6 @@ const MusicKits = () => {
       {filteredMusicKits?.map(item => (
         <MusicKitCard key={item.id}>
             <h2>{item.name}</h2>
-            <p>{item.description}</p>
             <img src={item.image} alt={item.name} />
         </MusicKitCard>
       ))}
