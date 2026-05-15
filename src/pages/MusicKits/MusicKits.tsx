@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import useFetch from "../useFetch/useFetch";
-import Loading from "../Loading/Loading";
+import useFetch from "../../components/useFetch/useFetch";
+import Loading from "../../components/Loading/Loading";
 
 const MusicKitTitle = styled.h1`
   text-align: center;
@@ -23,6 +23,11 @@ const MusicKitCard = styled.div`
   text-align:center;
   padding: 2rem;
   border-radius: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  &:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
   h2 {
     text-align: center;
     margin-bottom: 3rem;
@@ -39,7 +44,7 @@ const MusicKitCard = styled.div`
 `
 
 const MusicKits = () => {
-  const { data, loading, error } = useFetch('https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/music_kits.json'); 
+  const { data, loading, error } = useFetch('https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/music_kits.json');
 
   const filteredMusicKits = data?.filter(musickit => !musickit.name.includes('StatTrak™'))
 
@@ -48,16 +53,16 @@ const MusicKits = () => {
 
   return (
     <>
-    <MusicKitTitle>Music Kits</MusicKitTitle>
-    <MusicKitDiv>
-      {filteredMusicKits?.map(item => (
-        <MusicKitCard key={item.id}>
+      <MusicKitTitle>Music Kits</MusicKitTitle>
+      <MusicKitDiv>
+        {filteredMusicKits?.map(item => (
+          <MusicKitCard key={item.id}>
             <h2>{item.name}</h2>
             <img src={item.image} alt={item.name} />
-        </MusicKitCard>
-      ))}
-    </MusicKitDiv>
-     {/* <pre>{JSON.stringify(data, null, 2)}</pre>  */}
+          </MusicKitCard>
+        ))}
+      </MusicKitDiv>
+      {/* <pre>{JSON.stringify(data, null, 2)}</pre>  */}
     </>
   );
 };

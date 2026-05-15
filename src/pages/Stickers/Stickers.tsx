@@ -1,7 +1,7 @@
 import { useState } from "react";
-import useFetchSticker from "../useFetch/useFetchSticker";
+import useFetchSticker from "../../components/useFetch/useFetchSticker";
 import styled from "styled-components";
-import Loading from "../Loading/Loading";
+import Loading from "../../components/Loading/Loading";
 
 const StickersTitle = styled.h2`
     text-align: center;
@@ -65,6 +65,12 @@ const StickerCard = styled.div`
     flex-direction: column;
     padding: 1rem;
     height: 400px;
+    border-radius: 8px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    &:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
 `
 
 const StickerCardHeader = styled.div`

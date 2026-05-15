@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import useFetch from "../useFetch/useFetch"
-import Loading from "../Loading/Loading";
+import useFetch from "../../components/useFetch/useFetch";
+import Loading from "../../components/Loading/Loading";
 
 const KeychainsTitle = styled.h2`
     text-align: center;
@@ -20,6 +20,12 @@ const KeychainCard = styled.div`
     padding: 1.25rem 1rem;
     width: 20%;
     text-align: center;
+    border-radius: 8px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    &:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
     img {
       width: 80%;
     }

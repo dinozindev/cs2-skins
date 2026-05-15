@@ -1,250 +1,312 @@
 [
     {
         "id": "weapon_deagle",
-        "name": "Desert Eagle"
+        "name": "Desert Eagle",
+        "category": "Pistols"
     },
     {
         "id": "weapon_elite",
-        "name": "Dual Berettas"
+        "name": "Dual Berettas",
+        "category": "Pistols"
     },
     {
         "id": "weapon_fiveseven",
-        "name": "Five-SeveN"
+        "name": "Five-SeveN",
+        "category": "Pistols"
     },
     {
         "id": "weapon_glock",
-        "name": "Glock-18"
+        "name": "Glock-18",
+        "category": "Pistols"
     },
     {
         "id": "weapon_ak47",
-        "name": "AK-47"
+        "name": "AK-47",
+        "category": "Rifles"
     },
     {
         "id": "weapon_aug",
-        "name": "AUG"
+        "name": "AUG",
+        "category": "Rifles"
     },
     {
         "id": "weapon_awp",
-        "name": "AWP"
+        "name": "AWP",
+        "category": "Rifles"
     },
     {
         "id": "weapon_famas",
-        "name": "FAMAS"
+        "name": "FAMAS",
+        "category": "Rifles"
     },
     {
         "id": "weapon_g3sg1",
-        "name": "G3SG1"
+        "name": "G3SG1",
+        "category": "Rifles"
     },
     {
         "id": "weapon_galilar",
-        "name": "Galil AR"
+        "name": "Galil AR",
+        "category": "Rifles"
     },
     {
         "id": "weapon_m249",
-        "name": "M249"
+        "name": "M249",
+        "category": "Heavy"
     },
     {
         "id": "weapon_m4a1",
-        "name": "M4A4"
+        "name": "M4A4",
+        "category": "Rifles"
     },
     {
         "id": "weapon_mac10",
-        "name": "MAC-10"
+        "name": "MAC-10",
+        "category": "Sub"
     },
     {
         "id": "weapon_p90",
-        "name": "P90"
+        "name": "P90",
+        "category": "Sub"
     },
     {
         "id": "weapon_mp5sd",
-        "name": "MP5-SD"
+        "name": "MP5-SD",
+        "category": "Sub"
     },
     {
         "id": "weapon_ump45",
-        "name": "UMP-45"
+        "name": "UMP-45",
+        "category": "Sub"
     },
     {
         "id": "weapon_xm1014",
-        "name": "XM1014"
+        "name": "XM1014",
+        "category": "Heavy"
     },
     {
         "id": "weapon_bizon",
-        "name": "PP-Bizon"
+        "name": "PP-Bizon",
+        "category": "Sub"
     },
     {
         "id": "weapon_mag7",
-        "name": "MAG-7"
+        "name": "MAG-7",
+        "category": "Heavy"
     },
     {
         "id": "weapon_negev",
-        "name": "Negev"
+        "name": "Negev",
+        "category": "Heavy"
     },
     {
         "id": "weapon_sawedoff",
-        "name": "Sawed-Off"
+        "name": "Sawed-Off",
+        "category": "Heavy"
     },
     {
         "id": "weapon_tec9",
-        "name": "Tec-9"
+        "name": "Tec-9",
+        "category": "Pistols"
     },
     {
         "id": "weapon_hkp2000",
-        "name": "P2000"
+        "name": "P2000",
+        "category": "Pistols"
     },
     {
         "id": "weapon_mp7",
-        "name": "MP7"
+        "name": "MP7",
+        "category": "Sub"
     },
     {
         "id": "weapon_mp9",
-        "name": "MP9"
+        "name": "MP9",
+        "category": "Sub"
     },
     {
         "id": "weapon_nova",
-        "name": "Nova"
+        "name": "Nova",
+        "category": "Heavy"
     },
     {
         "id": "weapon_p250",
-        "name": "P250"
+        "name": "P250",
+        "category": "Pistols"
     },
     {
         "id": "weapon_scar20",
-        "name": "Scar-20"
+        "name": "Scar-20",
+        "category": "Rifles"
     },
     {
         "id": "weapon_sg556",
-        "name": "SG553"
+        "name": "SG553",
+        "category": "Rifles"
     },
     {
         "id": "weapon_ssg08",
-        "name": "SSG-08"
+        "name": "SSG-08",
+        "category": "Rifles"
     },
     {
         "id": "weapon_m4a1_silencer",
-        "name": "M4A1-S"
+        "name": "M4A1-S",
+        "category": "Rifles"
     },
     {
         "id": "weapon_usp_silencer",
-        "name": "USP-S"
+        "name": "USP-S",
+        "category": "Pistols"
     },
     {
         "id": "weapon_cz75a",
-        "name": "CZ75-Auto"
+        "name": "CZ75-Auto",
+        "category": "Pistols"
     },
     {
         "id": "weapon_revolver",
-        "name": "R8 Revolver"
+        "name": "R8 Revolver",
+        "category": "Pistols"
     },
     {
         "id": "weapon_bayonet",
-        "name": "Bayonet"
+        "name": "Bayonet",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_css",
-        "name": "Classic Knife"
+        "name": "Classic Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_flip",
-        "name": "Flip Knife"
+        "name": "Flip Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_gut",
-        "name": "Gut Knife"
+        "name": "Gut Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_karambit",
-        "name": "Karambit"
+        "name": "Karambit",
+        "category": "Knives"
     }, 
     {
         "id": "weapon_knife_m9_bayonet",
-        "name": "M9 Bayonet"
+        "name": "M9 Bayonet",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_tactical",
-        "name": "Huntsman Knife"
+        "name": "Huntsman Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_falchion",
-        "name": "Falchion Knife"
+        "name": "Falchion Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_survival_bowie",
-        "name": "Bowie Knife"
+        "name": "Bowie Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_butterfly",
-        "name": "Butterfly Knife"
+        "name": "Butterfly Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_push",
-        "name": "Shadow Daggers"
+        "name": "Shadow Daggers",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_cord",
-        "name": "Paracord Knife"
+        "name": "Paracord Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_canis",
-        "name": "Survival Knife"
+        "name": "Survival Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_ursus",
-        "name": "Ursus Knife"
+        "name": "Ursus Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_gypsy_jackknife",
-        "name": "Navaja Knife"
+        "name": "Navaja Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_outdoor",
-        "name": "Nomad Knife"
+        "name": "Nomad Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_stiletto",
-        "name": "Stiletto Knife"
+        "name": "Stiletto Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_widowmaker",
-        "name": "Talon Knife"
+        "name": "Talon Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_skeleton",
-        "name": "Skeleton Knife"
+        "name": "Skeleton Knife",
+        "category": "Knives"
     },
     {
         "id": "weapon_knife_kukri",
-        "name": "Kukri Knife"
+        "name": "Kukri Knife",
+        "category": "Knives"
     },  
     {
         "id": "studded_brokenfang_gloves",
-        "name": "Broken Fang Gloves"
+        "name": "Broken Fang Gloves",
+        "category": "Gloves"
     }, 
     {
         "id": "studded_bloodhound_gloves",
-        "name": "Bloodhound Gloves"
+        "name": "Bloodhound Gloves",
+        "category": "Gloves"
     },
     {
         "id": "sporty_gloves",
-        "name": "Sport Gloves"
+        "name": "Sport Gloves",
+        "category": "Gloves"
     },
     {
         "id": "slick_gloves",
-        "name": "Driver Gloves"
+        "name": "Driver Gloves",
+        "category": "Gloves"
     },
     {
         "id": "leather_handwraps",
-        "name": "Hand Wraps"
+        "name": "Hand Wraps",
+        "category": "Gloves"
     },
     {
         "id": "motorcycle_gloves",
-        "name": "Moto Gloves"
+        "name": "Moto Gloves",
+        "category": "Gloves"
     },
     {
         "id": "specialist_gloves",
-        "name": "Specialist Gloves"
+        "name": "Specialist Gloves",
+        "category": "Gloves"
     },
     {
         "id": "studded_hydra_gloves",
-        "name": "Hydra Gloves"
+        "name": "Hydra Gloves",
+        "category": "Gloves"
     }
 ]

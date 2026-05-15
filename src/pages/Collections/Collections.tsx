@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import useFetchCollection from "../useFetch/useFetchCollection";
+import useFetchCollection from "../../components/useFetch/useFetchCollection";
 import { useState } from "react";
-import Loading from "../Loading/Loading";
+import Loading from "../../components/Loading/Loading";
 
 const CollectionTitle = styled.h1`
     text-align: center;
@@ -23,9 +23,7 @@ const CollectionsDiv = styled.div`
     width: 20%;
     overflow: auto;
     gap: 0.5rem;
-    padding: 0.5rem;
-
-    
+    padding: 0.5rem; 
 `
 
 const CollectionCard = styled.div`
@@ -39,6 +37,8 @@ const CollectionCard = styled.div`
     width: 100%;
     text-align: center;
     background-color: #AF75F9;
+    
+
     p {
         margin-bottom: 1.25rem;
         font-weight: 700;
@@ -92,6 +92,12 @@ const WeaponCard = styled.div`
     border-radius: 16px;
     min-width: 20%;
     background-color: #4C495C;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    &:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
     h2 {
         font-size: 20px;
         margin-bottom: 0.4rem;
@@ -142,7 +148,7 @@ const Collections = () => {
             <CollectionMain>
                 <CollectionsDiv>
                     {filteredCollection?.map(collection => (
-                        <CollectionCard key={collection.id} onClick={() => { handleFilteredCollection(collection.id);}}>
+                        <CollectionCard key={collection.id} onClick={() => { handleFilteredCollection(collection.id); }}>
                             <p>{collection.name}</p>
                             <img src={collection.image} alt={collection.name} />
                         </CollectionCard>

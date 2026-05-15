@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom"
-import Home from "./components/Home/Home"
-import MusicKits from "./components/MusicKits/MusicKits"
-import Collections from "./components/Collections/Collections"
-import Weapons from "./components/Weapons/Weapons"
-import Stickers from "./components/Stickers/Stickers"
-import Agents from "./components/Agents/Agents"
-import Keychains from "./components/Keychains/Keychains"
+import Home from "./pages/Home/Home"
+import MusicKits from "./pages/MusicKits/MusicKits"
+import Collections from "./pages/Collections/Collections"
+import Weapons from "./pages/Weapons/Weapons"
+import Stickers from "./pages/Stickers/Stickers"
+import Agents from "./pages/Agents/Agents"
+import Keychains from "./pages/Keychains/Keychains"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
-import Error404 from "./components/Error404/Error404"
+import Error404 from "./pages/Error404/Error404"
 
 const App = () => {
   return (

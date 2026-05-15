@@ -1,7 +1,7 @@
 import { useState } from "react";
-import useFetchAgent from "../useFetch/useFetchAgent"
+import useFetchAgent from "../../components/useFetch/useFetchAgent";
 import styled from "styled-components";
-import Loading from "../Loading/Loading";
+import Loading from "../../components/Loading/Loading";
 
 const AgentsTitle = styled.h2`
     text-align: center;
@@ -50,7 +50,13 @@ const AgentCard = styled.div`
     border-radius: 0.25rem;
     text-align: center;
     img {
-    width: 90%}
+        width: 90%
+    }
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    &:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
 `
 
 const Agents = () => {
