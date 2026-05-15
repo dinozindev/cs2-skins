@@ -19,6 +19,7 @@ align-items: center;
 gap: 2rem;
   h2 {
     font-size: 64px;
+    text-align: center;
   }
   a {
     border: none;
@@ -42,14 +43,17 @@ gap: 2rem;
 
 const FeaturesDiv = styled.div`
   display:flex;
-  justify-content: space-evenly;
-  width: 50%;
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+  @media (max-width: 768px) { 
+    gap: 2rem;
+  }
 `
 
 const Feature = styled.div`
   h3 {
     font-size: 48px;
-
   }
 `
 
@@ -59,7 +63,7 @@ const Home = () => {
     <HomeMain>
       <HomeBanner>
         <h2>The Best Place to Check <b>CS2</b> Collectibles!</h2>
-        <Link to='/weapons'>Check out Skins</Link>
+        <Link to='/weapons'>Check out</Link>
         </HomeBanner>
         <FeaturesDiv>
           <Feature>
