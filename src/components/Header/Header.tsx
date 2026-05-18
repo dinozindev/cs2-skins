@@ -23,7 +23,7 @@ const StyledHeader = styled.header`
         color: grey;
     }
 
-    @media (max-width: 768px) { 
+    @media (max-width: 1279px) { 
         justify-content: space-between;
     }
 `
@@ -36,10 +36,10 @@ const Logo = styled.div`
         height: 70px;
     }
 
-    @media (max-width: 768px) { 
+    @media (max-width: 1279px) { 
         margin-left: 1rem;
         h1 {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     }
 `
@@ -47,30 +47,35 @@ const Logo = styled.div`
 const Navbar = styled.nav<{ $menu: boolean }>`
     display: flex;
     gap: 2rem;
-    @media only screen and (max-width: 768px) {
-      display: ${(props) => (props.$menu ? "flex" : "none")};
-      margin-top: 1rem;
-      width: 100%;
-      text-align: end;
-      background-color: #181818;
-      flex-direction: column;
-      position: absolute;
-      top: 90px;
-      padding: 1rem 0;
-      a {
-        margin: 0 1rem;
-      }
-    }
+    @media only screen and (max-width: 1279px) {
+        display: ${(props) => (props.$menu ? "flex" : "none")};
+        margin-top: 1.5rem;
+        width: 100%;
+        text-align: end;
+        background-color: #181818;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        padding: 0.75rem 0;
+        a {
+            padding: 0 1rem;
+        }
+}
     @media (min-width: 769px) and (max-width: 1279px) {
       justify-content: center;
 } 
+`
+
+const NavbarLink = styled(Link)`
+    padding-right: 1.5rem;
 `
 
 const StyledHamburger = styled(FontAwesomeIcon) <{ $menu: boolean }>`
     display: none;
     font-size: 32px;
     margin: 1rem;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 1279px) {
       display: ${(props) => (props.$menu ? "none" : "block")};
     }
 `
@@ -79,7 +84,7 @@ const StyledXmark = styled(FontAwesomeIcon) <{ $menu: boolean }>`
     display: none;
     font-size: 32px;
     margin: 1rem;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 1279px) {
       display: ${(props) => (props.$menu ? "block" : "none")};
     }
 `
@@ -89,12 +94,12 @@ const Header = () => {
     const [menu, setMenu] = useState<boolean>(false);
 
     const toggleMenu = () => {
-    if (menu) {
-      setMenu(false);
-    } else {
-      setMenu(true);
+        if (menu) {
+            setMenu(false);
+        } else {
+            setMenu(true);
+        }
     }
-  }
 
     return (
         <>
@@ -108,12 +113,12 @@ const Header = () => {
                 <StyledHamburger $menu={menu} icon={faBars} onClick={() => toggleMenu()} />
                 <StyledXmark $menu={menu} icon={faXmark} onClick={() => toggleMenu()} />
                 <Navbar $menu={menu}>
-                    <Link to='/musickits'>Music Kits</Link>
-                    <Link to='/collections'>Collections</Link>
-                    <Link to='/weapons'>Weapons</Link>
-                    <Link to='/stickers'>Stickers</Link>
-                    <Link to='/agents'>Agents</Link>
-                    <Link to='/keychains'>Keychains</Link>
+                    <NavbarLink to='/musickits'>Music Kits</NavbarLink>
+                    <NavbarLink to='/collections'>Collections</NavbarLink>
+                    <NavbarLink to='/weapons'>Weapons</NavbarLink>
+                    <NavbarLink to='/stickers'>Stickers</NavbarLink>
+                    <NavbarLink to='/agents'>Agents</NavbarLink>
+                    <NavbarLink to='/keychains'>Keychains</NavbarLink>
                 </Navbar>
             </StyledHeader>
         </>

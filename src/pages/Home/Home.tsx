@@ -39,6 +39,15 @@ gap: 2rem;
     background-color: #281F32;
     transition: 0.2s;
   }
+  @media (max-width: 1279px) { 
+    h2 {
+      font-size: 40px;
+    }
+
+    a {
+      width: 40%;
+    }
+  }
 `
 
 const FeaturesDiv = styled.div`
@@ -46,7 +55,7 @@ const FeaturesDiv = styled.div`
   justify-content: center;
   gap: 4rem;
   width: 100%;
-  @media (max-width: 768px) { 
+  @media (max-width: 1024px) { 
     gap: 2rem;
   }
 `
@@ -54,6 +63,11 @@ const FeaturesDiv = styled.div`
 const Feature = styled.div`
   h3 {
     font-size: 48px;
+  }
+  @media (max-width: 1279px) { 
+    h3 {
+      font-size: 32px;
+    }
   }
 `
 
