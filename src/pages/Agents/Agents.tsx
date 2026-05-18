@@ -13,6 +13,7 @@ const AgentsButtonsDiv = styled.div`
     display:flex;
     justify-content:center;
     gap: 1rem;
+    flex-wrap: wrap;
 `
 
 const AgentButton = styled.button`
@@ -56,6 +57,9 @@ const AgentCard = styled.div`
     &:hover {
         transform: translateY(-8px) scale(1.02);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+    @media (max-width: 768px) { 
+        width: 70%;
     }
 `
 

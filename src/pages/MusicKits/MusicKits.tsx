@@ -5,9 +5,6 @@ import Loading from "../../components/Loading/Loading";
 const MusicKitTitle = styled.h1`
   text-align: center;
   font-size: 60px;
-  @media (max-width: 768px) { 
-        font-size: 32px;
-    }
 `
 
 const MusicKitDiv = styled.div`

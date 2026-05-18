@@ -7,9 +7,6 @@ import Loading from "../../components/Loading/Loading";
 const TitleWeapon = styled.h1`
     text-align: center;
     font-size: 60px;
-    @media (max-width: 768px) { 
-        font-size: 32px;
-    }
 `
 
 const CategoryList = styled.ul`
@@ -197,7 +194,6 @@ const Weapons = () => {
                     </WeaponCard>
                 ))}
             </WeaponContainer>
-            {/* <pre>{JSON.stringify(data, null, 2)}</pre>  */}
         </>
     )
 }

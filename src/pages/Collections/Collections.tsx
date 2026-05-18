@@ -6,6 +6,7 @@ import Loading from "../../components/Loading/Loading";
 const CollectionTitle = styled.h1`
     text-align: center;
     font-size: 60px;
+    
 `
 
 const CollectionMain = styled.main`
@@ -14,6 +15,10 @@ const CollectionMain = styled.main`
     padding: 5rem 0;
     margin: 0 auto;
     justify-content: center;
+    @media only screen and (max-width: 1060px) {
+      flex-direction: column;
+      align-items: center;
+    }
 `
 
 const CollectionsDiv = styled.div`
@@ -24,20 +29,23 @@ const CollectionsDiv = styled.div`
     overflow: auto;
     gap: 0.5rem;
     padding: 0.5rem; 
+    @media only screen and (max-width: 1060px){
+        width: 90%;
+        flex-wrap: nowrap;
+        height: auto;
+        margin-bottom: 4.5rem;
+    }
 `
 
 const CollectionCard = styled.div`
-    text-align: center;
     background-color: grey;
     padding: 1rem;
     display:flex;
     justify-content: space-between;
     border-radius: 8px;
-    height: 50px;
     width: 100%;
-    text-align: center;
+    height: 4rem;
     background-color: #AF75F9;
-    
 
     p {
         margin-bottom: 1.25rem;
@@ -56,6 +64,14 @@ const CollectionCard = styled.div`
     img {
         height: 90%;
     }
+    @media only screen and (max-width: 1060px){
+        width: 14rem;
+        height: 8rem;
+        p {
+            margin-bottom: 0;
+        }
+    }   
+        
 `
 
 const CollectionDetails = styled.div`
@@ -83,6 +99,10 @@ const CollectionHeader = styled.header`
     img {
         height: 90%;
     }
+
+    @media only screen and (max-width: 1060px){
+        width: 100%;
+    } 
 `
 
 const WeaponCard = styled.div`
@@ -143,7 +163,6 @@ const Collections = () => {
     // quando clicar em uma coleção, esconder as demais e mostrar apenas a clicada.
     return (
         <>
-            {/* <pre>{JSON.stringify(data, null, 2)}</pre>  */}
             <CollectionTitle>Collections</CollectionTitle>
             <CollectionMain>
                 <CollectionsDiv>

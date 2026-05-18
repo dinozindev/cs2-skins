@@ -16,6 +16,9 @@ const StickersHeader = styled.header`
     background-color: #AF75F9;
     width: 50%;
     font-weight: 700;
+    @media (max-width: 1024px) { 
+      width: 80%;
+    }
 `
 
 const StickersMain = styled.div`
@@ -23,6 +26,11 @@ const StickersMain = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 5rem;
+
+    @media (max-width: 1024px) { 
+      flex-direction: column;
+      align-items: center;
+    }
 `
 
 const CratesDiv = styled.div`
@@ -32,6 +40,12 @@ const CratesDiv = styled.div`
     display:flex;
     gap: 0.5rem;
     flex-direction: column;
+
+    @media (max-width: 1024px) { 
+      flex-direction: row;
+      width: 80%;
+      height: 50px;
+    }
 `
 
 const CrateButton = styled.button`
@@ -41,12 +55,18 @@ const CrateButton = styled.button`
     border: none;
     padding: 0.5rem 0;
     border-radius: 4px;
+    width: 100%;
 
     &:hover {
       cursor: pointer;
       color: #fff;
       background-color: #281F32;
       transition: 0.2s;
+    }
+
+    @media (max-width: 1024px) {
+      height: 50px; 
+      padding: 0 5rem;
     }
 `
 
@@ -56,6 +76,10 @@ const StickersDiv = styled.div`
     justify-content: center;
     width:70%;
     gap: 1rem;
+    margin-top: 5rem;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
 `
 
 const StickerCard = styled.div`
@@ -64,19 +88,28 @@ const StickerCard = styled.div`
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    height: 400px;
+    height: 350px;
     border-radius: 8px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     &:hover {
         transform: translateY(-8px) scale(1.02);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     }
+    @media (max-width: 1024px) { 
+      width: 40%;
+      height: auto;
+    }
+
+    @media (max-width: 576px) {
+      gap: 3rem;
+    }
 `
 
 const StickerCardHeader = styled.div`
-  height: 20%;
-  text-align: center;
+    height: 25%;
+    text-align: center;
 `
+
 const StickerImage = styled.img` 
 `
 

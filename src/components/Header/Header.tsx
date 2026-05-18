@@ -76,6 +76,7 @@ const StyledHamburger = styled(FontAwesomeIcon) <{ $menu: boolean }>`
     display: none;
     font-size: 32px;
     margin: 1rem;
+    cursor: pointer;
     @media only screen and (max-width: 1279px) {
       display: ${(props) => (props.$menu ? "none" : "block")};
     }
@@ -85,6 +86,7 @@ const StyledXmark = styled(FontAwesomeIcon) <{ $menu: boolean }>`
     display: none;
     font-size: 32px;
     margin: 1rem;
+    cursor: pointer;
     @media only screen and (max-width: 1279px) {
       display: ${(props) => (props.$menu ? "block" : "none")};
     }
