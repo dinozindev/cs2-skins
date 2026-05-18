@@ -5,6 +5,9 @@ import Loading from "../../components/Loading/Loading";
 const MusicKitTitle = styled.h1`
   text-align: center;
   font-size: 60px;
+  @media (max-width: 768px) { 
+        font-size: 32px;
+    }
 `
 
 const MusicKitDiv = styled.div`
@@ -13,12 +16,11 @@ const MusicKitDiv = styled.div`
   justify-content: center;
   padding: 5.5rem 0;
   gap: 0.75rem;
-  width: 100%;
   background-color: #181818;
 `
 
 const MusicKitCard = styled.div`
-  width: 19%;
+  width: 22%;
   background-color: #281F32;
   text-align:center;
   padding: 2rem;
@@ -39,8 +41,13 @@ const MusicKitCard = styled.div`
   img {
     margin-top: 1.5rem;
     height: 60%;
-    width: 80%;
+    width: 70%;
   }
+
+  @media only screen and (max-width: 768px) {
+    width: 50%;
+  }
+
 `
 
 const MusicKits = () => {

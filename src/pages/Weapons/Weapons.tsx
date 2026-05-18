@@ -18,7 +18,7 @@ const CategoryList = styled.ul`
     justify-content: center;
     gap: 1rem;
     padding-top: 3rem;
-    @media (max-width: 768px) { 
+    @media (max-width: 1279px) { 
         flex-wrap:wrap;
   }
 `
@@ -83,6 +83,10 @@ const WeaponCard = styled.div`
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   }
+
+    @media only screen and (max-width: 1024px) {
+        width: 70%;
+    }
 `
 
 const WeaponCardHeader = styled.div`

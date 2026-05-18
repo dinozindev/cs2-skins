@@ -47,6 +47,7 @@ const Logo = styled.div`
 const Navbar = styled.nav<{ $menu: boolean }>`
     display: flex;
     gap: 2rem;
+    z-index: 60;
     @media only screen and (max-width: 1279px) {
         display: ${(props) => (props.$menu ? "flex" : "none")};
         margin-top: 1.5rem;
@@ -57,7 +58,7 @@ const Navbar = styled.nav<{ $menu: boolean }>`
         position: absolute;
         top: 90px;
         left: 0;
-        padding: 0.75rem 0;
+        padding: 1.25rem 0;
         a {
             padding: 0 1rem;
         }
